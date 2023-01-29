@@ -222,7 +222,7 @@ async function attachFormMedia(
 ) {
   let fileName = media.filename ?? `${id}.${DEFAULT_EXTENSIONS[id] ?? 'dat'}`
   if (media.url !== undefined) {
-    const timeout = 500_000 // ms
+    const timeout = 3600_000 // ms
     const res = await fetch(media.url, { agent, timeout })
     return form.addPart({
       headers: {
